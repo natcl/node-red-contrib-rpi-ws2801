@@ -10,8 +10,7 @@ const npm_install = exec('npm install -f');
 
 if (port) {
   command = spawn('node', ['node_modules/node-red/red.js', '-v', '-p', port, '-userDir', '.']);
-}
-else {
+} else {
   command = spawn('node', ['node_modules/node-red/red.js', '-v', '-userDir', '.']);
 }
 

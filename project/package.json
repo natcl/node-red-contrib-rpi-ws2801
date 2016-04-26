@@ -1,17 +1,17 @@
 {
-    "name"         : "template-example",
-    "version"      : "0.0.1",
-    "description"  : "Node-RED template example project",
-    "dependencies": {
-        "node-red": "~0.13.4",
-        "node-red-contrib-template": "../"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/natcl/node-red-contrib-template.git"
-    },
-    "keywords": [ "node-red", "template" ],
-    "scripts": {
-      "start": "node start.js"
-    }
+  "name": "template-example",
+  "version": "0.0.1",
+  "description": "Node-RED template example project",
+  "dependencies": {
+    "node-red": "~0.13.4",
+    "node-red-contrib-template": "../"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natcl/node-red-contrib-template.git"
+  },
+  "keywords": ["node-red", "template"],
+  "scripts": {
+    "start": "node start.js"
+  }
 }

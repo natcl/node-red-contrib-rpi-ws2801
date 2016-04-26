@@ -1,17 +1,16 @@
 {
-    "name"         : "node-red-contrib-template",
-    "version"      : "0.0.1",
-    "description"  : "A Node-RED node template",
-    "dependencies": {
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/natcl/node-red-contrib-template.git"
-    },
-    "keywords": [ "node-red"],
-    "node-red"     : {
-        "nodes": {
-            "template": "template/template.js"
-        }
+  "name": "node-red-contrib-template",
+  "version": "0.0.1",
+  "description": "A Node-RED node template",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natcl/node-red-contrib-template.git"
+  },
+  "keywords": ["node-red"],
+  "node-red": {
+    "nodes": {
+      "template": "template/template.js"
     }
+  }
 }
