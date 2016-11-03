@@ -12,6 +12,6 @@
   },
   "keywords": ["node-red", "template"],
   "scripts": {
-    "start": "node node_modules/node-red/red.js -v -u ."
+    "start": "npm install -f ; node node_modules/node-red/red.js -v -u ."
   }
 }
