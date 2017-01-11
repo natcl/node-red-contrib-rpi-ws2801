@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('rpi-ws2801', {
+        category: 'hardware',
+        color: '#a6bbcf',
+        defaults: {
+            numleds: {
+                value: 1
+            },
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "file.png",
+        label: function() {
+            return this.name || "ws2801";
+        },
+        paletteLabel: "ws2801"
+    });
+</script>
+
+<script type="text/x-red" data-template-name="rpi-ws2801">
+    <div class="form-row">
+        <label for="node-input-numleds"><i class="icon-tag"></i> Number of LEDs</label>
+        <input type="text" id="node-input-numleds" placeholder="">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="rpi-ws2801">
+    <p>A simple node that converts the message payloads into all lower-case characters</p>
+</script>

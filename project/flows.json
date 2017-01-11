@@ -1,0 +1,38 @@
+[
+    {
+        "id": "d425784e.6b99d",
+        "type": "tab",
+        "label": "Flow 1"
+    },
+    {
+        "id": "fab487bd.666be8",
+        "type": "inject",
+        "z": "d425784e.6b99d",
+        "name": "",
+        "topic": "fill",
+        "payload": "[255,255,255]",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "2a3c13df.8cd3c4"
+            ]
+        ]
+    },
+    {
+        "id": "2a3c13df.8cd3c4",
+        "type": "rpi-ws2801",
+        "z": "d425784e.6b99d",
+        "numleds": "1",
+        "name": "",
+        "x": 500,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    }
+]

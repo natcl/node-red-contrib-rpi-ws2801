@@ -1,17 +1,17 @@
 {
-  "name": "template-example",
+  "name": "node-red-contrib-rpi-ws2801",
   "version": "0.0.1",
-  "description": "Node-RED template example project",
+  "description": "A Node-RED node to control ws2801 based led strips on the Raspberry pi.",
   "dependencies": {
     "node-red": "~0.15.0",
-    "node-red-contrib-template": "../"
+    "node-red-contrib-rpi-ws2801": "../"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/natcl/node-red-contrib-template.git"
+    "url": "https://github.com/natcl/node-red-contrib-rpi-ws2801.git"
   },
-  "keywords": ["node-red", "template"],
+  "keywords": ["node-red"],
   "scripts": {
-    "start": "npm install -f ; node node_modules/node-red/red.js -v -u ."
+    "start": "rm -rf node_modules/node-red-contrib-rpi-ws2801 ; npm install -f ; node node_modules/node-red/red.js -v -u ."
   }
 }
