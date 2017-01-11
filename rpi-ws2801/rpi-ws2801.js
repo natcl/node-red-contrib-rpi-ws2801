@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(RED) {
     function Ws2801Node(config) {
         RED.nodes.createNode(this, config);
