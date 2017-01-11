@@ -12,7 +12,7 @@ module.exports = function(RED) {
 
         node.on('input', function(msg) {
             if (msg.topic === "fill") {
-                node.leds.fill(msg.payload);
+                node.leds.fill(msg.payload[0], msg.payload[1], msg.payload[2]);
                 node.leds.update();
             }
             if (msg.topic === "setcolor") {
