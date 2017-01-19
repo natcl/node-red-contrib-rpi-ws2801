@@ -7,8 +7,12 @@ module.exports = function(RED) {
 
         node.leds = require("rpi-ws2801");
         node.numLeds = parseInt(config.numleds);
+        node.port = config.port;
+        if (node.port === "") {
+            node.port = "/dev/spidev0.0";
+        }
 
-        node.leds.connect(node.numLeds);
+        node.leds.connect(node.numLeds, node.port);
 
         node.on('input', function(msg) {
             if (msg.topic === "fill") {

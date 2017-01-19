@@ -6,6 +6,9 @@
             numleds: {
                 value: 1
             },
+            port: {
+                value: ""
+            }
             name: {
                 value: ""
             }
@@ -24,6 +27,10 @@
     <div class="form-row">
         <label for="node-input-numleds"><i class="icon-tag"></i> Number of LEDs</label>
         <input type="text" id="node-input-numleds" placeholder="">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="icon-tag"></i> SPI port</label>
+        <input type="text" id="node-input-port" placeholder="/dev/spidev0.0">
     </div>
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
