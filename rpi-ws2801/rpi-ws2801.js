@@ -12,7 +12,11 @@ module.exports = function(RED) {
             node.port = "/dev/spidev0.0";
         }
 
-        node.leds.connect(node.numLeds, node.port);
+        try {
+            node.leds.connect(node.numLeds, node.port);
+        } catch (e) {
+            node.error("ERROR: Cannot open SPI port, is it activated and are you on a Raspberry pi ?");
+        }
 
         node.on('input', function(msg) {
             if (msg.topic === "fill") {
@@ -38,7 +42,11 @@ module.exports = function(RED) {
         });
 
         node.on('close', function() {
-            node.leds.disconnect();
+            try {
+                node.leds.disconnect();
+            } catch (e) {
+                node.error("Can't close SPI Port");
+            }
         });
     }
     RED.nodes.registerType("rpi-ws2801", Ws2801Node);

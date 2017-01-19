@@ -15,24 +15,23 @@
         "repeat": "",
         "crontab": "",
         "once": false,
-        "x": 300,
-        "y": 320,
+        "x": 291,
+        "y": 360,
         "wires": [
             [
-                "2a3c13df.8cd3c4"
+                "7ab9103f.fd842"
             ]
         ]
     },
     {
-        "id": "2a3c13df.8cd3c4",
+        "id": "7ab9103f.fd842",
         "type": "rpi-ws2801",
         "z": "d425784e.6b99d",
-        "numleds": "1",
+        "numleds": 1,
+        "port": "",
         "name": "",
-        "x": 500,
-        "y": 360,
-        "wires": [
-            []
-        ]
+        "x": 566.5,
+        "y": 351,
+        "wires": []
     }
 ]
