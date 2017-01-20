@@ -1,9 +1,9 @@
 {
   "name": "node-red-contrib-rpi-ws2801",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Node-RED node to control ws2801 based led strips on the Raspberry pi.",
   "dependencies": {
-      "rpi-ws2801": "natcl/node-rpi-ws2801#patch-1"
+      "rpi-ws2801": "Jorgen-VikingGod/node-rpi-ws2801#aed276dbb6efa158e58746fb157e6b9a553416e1"
   },
   "repository": {
     "type": "git",
