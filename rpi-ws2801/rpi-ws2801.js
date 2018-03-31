@@ -11,6 +11,7 @@ module.exports = function(RED) {
         if (node.port === "") {
             node.port = "/dev/spidev0.0";
         }
+        
         node.gamma = parseFloat(config.gamma)
 
         try {
