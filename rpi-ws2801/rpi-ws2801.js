@@ -11,9 +11,11 @@ module.exports = function(RED) {
         if (node.port === "") {
             node.port = "/dev/spidev0.0";
         }
+        
+        node.gamma = parseFloat(config.gamma)
 
         try {
-            node.leds.connect(node.numLeds, node.port);
+            node.leds.connect(node.numLeds, node.port, node.gamma);
         } catch (e) {
             node.error("ERROR: Cannot open SPI port, is it activated and are you on a Raspberry pi ?");
         }
