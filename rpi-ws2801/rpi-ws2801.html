@@ -9,6 +9,12 @@
             port: {
                 value: ""
             },
+            spiBus: {
+                value: 0
+            },
+            spiDevice: {
+                value: 0
+            },
             name: {
                 value: ""
             },
@@ -32,8 +38,12 @@
         <input type="text" id="node-input-numleds" placeholder="" style="width:10%;">
     </div>
     <div class="form-row">
-        <label for="node-input-port"><i class="fa fa-random"></i> SPI port</label>
-        <input type="text" id="node-input-port" placeholder="/dev/spidev0.0">
+        <label for="node-input-bus"><i class="fa fa-random"></i> SPI Bus</label>
+        <input type="text" id="node-input-bus" placeholder="">
+    </div>
+    <div class="form-row">
+        <label for="node-input-device"><i class="fa fa-random"></i> SPI port</label>
+        <input type="text" id="node-input-device" placeholder="">
     </div>
     <div class="form-row">
         <label for="node-input-gamma"><i class="fa fa-list-ol"></i> Gamma</label>
