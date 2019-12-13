@@ -7,15 +7,20 @@ module.exports = function(RED) {
 
         node.leds = require("rpi-ws2801");
         node.numLeds = parseInt(config.numleds);
-        node.port = config.port;
-        if (node.port === "") {
-            node.port = "/dev/spidev0.0";
+        node.bus = config.bus;
+        if (node.bus === "") {
+            node.bus = "0";
+        }
+        
+        node.device = config.device;
+        if (node.device === "") {
+            node.device = "0";
         }
         
         node.gamma = parseFloat(config.gamma)
 
         try {
-            node.leds.connect(node.numLeds, node.port, node.gamma);
+            node.leds.connect(node.numLeds, node.bus, node.device, node.gamma);
         } catch (e) {
             node.error("ERROR: Cannot open SPI port, is it activated and are you on a Raspberry pi ?");
         }
