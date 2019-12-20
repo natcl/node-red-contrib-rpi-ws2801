@@ -11,7 +11,7 @@ module.exports = function(RED) {
         if (node.port === "") {
             node.port = "/dev/spidev0.0";
         }
-        const numbers = node.port.match(/\d/g);
+        const numbers = node.port.match(/\d/g).map(Number);
         if(numbers.length !== 2) {
             node.error("ERROR: Cannot parse SPI port, did you specify the property correctly ? (Examples: /dev/spidev0.0  /dev/spidev0.1)");
         }
