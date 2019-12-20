@@ -11,11 +11,18 @@ module.exports = function(RED) {
         if (node.port === "") {
             node.port = "/dev/spidev0.0";
         }
+        const numbers = node.port.match(/\d/g).map(Number);
+        if(numbers.length !== 2) {
+            node.error("ERROR: Cannot parse SPI port, did you specify the property correctly ? (Examples: /dev/spidev0.0  /dev/spidev0.1)");
+        }
+        node.spiBus = numbers[0];
+        node.spiDevice = numbers[1];
         
         node.gamma = parseFloat(config.gamma)
 
         try {
-            node.leds.connect(node.numLeds, node.port, node.gamma);
+            //connect: function(numLEDs, spiBus, spiDevice, gamma)
+            node.leds.connect(node.numLeds, node.spiBus, node.spiDevice, node.gamma);
         } catch (e) {
             node.error("ERROR: Cannot open SPI port, is it activated and are you on a Raspberry pi ?");
         }
